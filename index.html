@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Hover Effect with White Overlay</title>
+  <style>
+    html, body {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      background: #000;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      overflow: hidden;
+    }
+
+    .image-container {
+      position: relative;
+      max-width: 90vw;
+      max-height: 90vh;
+      overflow: hidden;
+      cursor: pointer;
+      display: inline-block;
+    }
+
+    .image-container img {
+      width: 100%;
+      height: auto;
+      display: block;
+      object-fit: contain;
+      transition: transform 0.3s ease;
+      vertical-align: middle;
+      /* Removed border-radius for sharp corners */
+    }
+
+    /* Overlay */
+    .overlay {
+      position: absolute;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: rgba(255, 255, 255, 0);
+      transition: background 0.3s ease;
+      pointer-events: none;
+    }
+
+    /* Show overlay on hover */
+    .image-container:hover .overlay {
+      background: rgba(255, 255, 255, 0.4);
+    }
+
+    a {
+      text-decoration: none;
+      display: inline-block;
+      position: relative;
+      /* Make sure <a> fills container */
+      display: block;
+      width: 100%;
+      height: 100%;
+    }
+  </style>
+</head>
+<body>
+  <div class="image-container">
+    <a href="https://www.rysadesigns.com/sports-edits" target="_blank" rel="noopener noreferrer">
+      <img
+        src="https://lh4.googleusercontent.com/jRroOrP9KJlTUFMe9SXKn0LzvBGTaCgY-vzsTY8hJs9iqhH6PIjkEiZaldoozJXgrJh3q_Olu0ixY0hrRDwB-D_pG0W93KXH2wvaiiwE9BRrrN7t9jQbY5MHFdM89T0yuGwY6l7nHHc=w1280"
+        alt="Rysa Designs Image"
+      />
+      <div class="overlay"></div>
+    </a>
+  </div>
+</body>
+</html>
+
