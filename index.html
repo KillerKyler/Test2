@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Hover Effect on Single Image</title>
+  <style>
+    /* Remove default margin and padding, make body full viewport */
+    html, body {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      overflow: hidden; /* prevent scrollbars */
+      background: #fff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    /* Container to control image size and overflow */
+    .image-container {
+      max-width: 90vw;
+      max-height: 90vh;
+      overflow: hidden; /* hide any overflow when scaling */
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      cursor: pointer;
+    }
+
+    img.hover-image {
+      width: 100%;
+      height: auto;
+      display: block;
+      object-fit: contain;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      border-radius: 12px;
+      box-shadow: inherit;
+    }
+
+    img.hover-image:hover {
+      transform: scale(1.05);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+    }
+  </style>
+</head>
+<body>
+  <div class="image-container">
+    <img
+      class="hover-image"
+      src="https://lh4.googleusercontent.com/jRroOrP9KJlTUFMe9SXKn0LzvBGTaCgY-vzsTY8hJs9iqhH6PIjkEiZaldoozJXgrJh3q_Olu0ixY0hrRDwB-D_pG0W93KXH2wvaiiwE9BRrrN7t9jQbY5MHFdM89T0yuGwY6l7nHHc=w1280"
+      alt="Rysa Designs Image"
+    />
+  </div>
+</body>
+</html>
